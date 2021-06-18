@@ -11,6 +11,7 @@ class Directory(rpyc.Service):
         if server_name not in servers:
             token = str(hash(server_name)+hash(randint(0,50)))
             servers [server_name] = {'ip': addr , 'token': token}
+            servers [server_name] = {'ip': addr , 'token': token}
             print(f"Servidores: {servers}")
             print(f"[{server_name}] {ip_adress}:{port_number}\n[{server_name}] {token}\n\n")
             success = (True, token)
